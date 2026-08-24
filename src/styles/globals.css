@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-w-80 bg-white font-sans text-gray-900 antialiased;
+  }
+
+  ::selection {
+    @apply bg-primary/20 text-gray-900;
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .market-container {
+    @apply mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-10 xl:px-12;
+  }
+
+  .market-section {
+    @apply py-9 sm:py-12 lg:py-14;
+  }
+
+  .promo-card {
+    @apply relative min-h-[300px] overflow-hidden rounded-2xl shadow-sm focus-visible:ring-offset-4;
+  }
+
+  .promo-copy {
+    @apply absolute inset-x-0 bottom-0 z-10 p-6;
+  }
+
+  .promo-copy h2 {
+    @apply mt-2 text-3xl font-black leading-[1.05] tracking-tight;
+  }
+
+  .promo-copy span {
+    @apply mt-5 inline-flex rounded-full bg-white px-4 py-2 text-[11px] font-bold text-gray-900 shadow-sm;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-semibold transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white shadow-sm hover:bg-primary-hover active:bg-primary-active focus:ring-primary;
+  }
+
+  .btn-secondary {
+    @apply border border-gray-300 bg-white text-gray-700 shadow-sm hover:bg-gray-50 active:bg-gray-100 focus:ring-primary;
+  }
+
+  .btn-ghost {
+    @apply text-gray-700 hover:bg-gray-100 focus:ring-primary;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-sm;
+  }
+
+  .btn-md {
+    @apply px-4 py-2 text-base;
+  }
+
+  .btn-lg {
+    @apply px-5 py-2.5 text-lg;
+  }
+
+  .input {
+    @apply block h-10 w-full rounded-md border border-gray-300 bg-white px-3 text-gray-900 placeholder-gray-400 shadow-sm transition-colors duration-150 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 disabled:cursor-not-allowed disabled:bg-gray-50 disabled:text-gray-400;
+  }
+
+  .input-error {
+    @apply border-red-500 focus:border-red-500 focus:ring-red-500/20;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+
+  .card {
+    @apply rounded-lg border border-gray-200 bg-white shadow-sm;
+  }
+
+  .card-hover {
+    @apply transition-all duration-150 hover:-translate-y-0.5 hover:shadow-md;
+  }
+
+  .page-header {
+    @apply border-b border-gray-200 bg-gray-50;
+  }
+
+  .eyebrow {
+    @apply text-sm font-semibold uppercase tracking-wider text-primary;
+  }
+
+  .alert-error {
+    @apply rounded-md border border-red-200 bg-error-background p-4 text-sm text-error;
+  }
+
+  .alert-success {
+    @apply rounded-md border border-emerald-200 bg-success-background p-4 text-sm text-success;
+  }
+
+  .skip-link {
+    @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded-md bg-primary px-4 py-2 font-semibold text-white shadow-lg transition-transform focus:translate-y-0;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

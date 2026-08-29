@@ -1,0 +1,10 @@
+export { HomePage } from './HomePage';
+export { ProductsPage } from './ProductsPage';
+export { ProductDetailPage } from './ProductDetailPage';
+export { CartPage } from './CartPage';
+export { CheckoutPage } from './CheckoutPage';
+export { LoginPage } from './LoginPage';
+export { RegisterPage } from './RegisterPage';
+export { ProfilePage } from './ProfilePage';
+export { OrderHistoryPage } from './OrderHistoryPage';
+export { OrderDetailPage } from './OrderDetailPage';

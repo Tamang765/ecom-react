@@ -5,50 +5,50 @@ import { useQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
 import { Link } from "react-router-dom";
 
-const categories = [
-  {
-    name: "Electronics",
-    image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=360&q=80",
-    fallback: "🎧",
-  },
-  {
-    name: "Fashion",
-    image:
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=360&q=80",
-    fallback: "👗",
-  },
-  {
-    name: "Luxury",
-    image:
-      "https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=360&q=80",
-    fallback: "👜",
-  },
-  {
-    name: "Home Decor",
-    image:
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=360&q=80",
-    fallback: "🏡",
-  },
-  {
-    name: "Health & Beauty",
-    image:
-      "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=360&q=80",
-    fallback: "✨",
-  },
-  {
-    name: "Groceries",
-    image:
-      "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=360&q=80",
-    fallback: "🥑",
-  },
-  {
-    name: "Footwear",
-    image:
-      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=360&q=80",
-    fallback: "👟",
-  },
-];
+// const categories = [
+//   {
+//     name: "Electronics",
+//     image:
+//       "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=360&q=80",
+//     fallback: "🎧",
+//   },
+//   {
+//     name: "Fashion",
+//     image:
+//       "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=360&q=80",
+//     fallback: "👗",
+//   },
+//   {
+//     name: "Luxury",
+//     image:
+//       "https://images.unsplash.com/photo-1523779917675-b6ed3a42a561?auto=format&fit=crop&w=360&q=80",
+//     fallback: "👜",
+//   },
+//   {
+//     name: "Home Decor",
+//     image:
+//       "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=360&q=80",
+//     fallback: "🏡",
+//   },
+//   {
+//     name: "Health & Beauty",
+//     image:
+//       "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=360&q=80",
+//     fallback: "✨",
+//   },
+//   {
+//     name: "Groceries",
+//     image:
+//       "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=360&q=80",
+//     fallback: "🥑",
+//   },
+//   {
+//     name: "Footwear",
+//     image:
+//       "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=360&q=80",
+//     fallback: "👟",
+//   },
+// ];
 
 function ArrowIcon({ className = "w-4 h-4" }: { className?: string }) {
   return (
@@ -210,10 +210,10 @@ export function HomePage() {
         .slice(0, 5),
     [activeProducts],
   );
-  const wellStockedProducts = useMemo(
-    () => [...activeProducts].sort((a, b) => b.stock - a.stock).slice(0, 5),
-    [activeProducts],
-  );
+  // const wellStockedProducts = useMemo(
+  //   () => [...activeProducts].sort((a, b) => b.stock - a.stock).slice(0, 5),
+  //   [activeProducts],
+  // );
   const featuredProduct = newestProducts.find((product) => product.stock > 0);
 
   return (
